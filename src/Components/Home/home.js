@@ -6,6 +6,16 @@ import App from "../../App"
 
 
 class Home extends Component {
+
+
+  changestate(){
+    if(this.props.home == true){
+      this.props.changeHome(false)
+    } else {
+      this.props.changeHome(true)
+    }
+  }
+
     render() {
         return (
             <div className="typewriter">
@@ -25,10 +35,10 @@ class Home extends Component {
           />
         </div>
       </Delayed>
-      <Delayed waitBeforeShow={8000}>
+      <Delayed waitBeforeShow={0}>
         <div class="buttons">
           <div class="container">
-            <a href="" class="btn effect04" data-sm-link-text="JOIN" target="_blank" onClick={() => App.togglehomestate()}><span>NEXT</span></a>
+            <a class="btn effect04" data-sm-link-text="JOIN" target="_blank" onClick={() => this.changestate()} ><span>NEXT</span></a>
           </div>
         </div>
       </Delayed>

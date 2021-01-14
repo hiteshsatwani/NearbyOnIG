@@ -1,0 +1,11 @@
+.basic-single{
+    width: 500px;
+    margin: 0 auto;
+}
+
+.location{
+    position: fixed;
+    top: 50%;
+    bottom: 50%;
+    width: 100%;
+}
