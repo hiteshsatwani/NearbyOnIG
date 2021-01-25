@@ -12,40 +12,74 @@ class Details extends Component {
         super(props);
         this.state = {
             username: '',
-            place: ''
+            place: '',
+            button: false ? true : false
         };
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+
+        this.handleChangeInput = this.handleChangeInput.bind(this);
+        this.handleChangeSelect = this.handleChangeSelect.bind(this);
+
     }
 
-    handleChange(event) {
-        this.setState({ value: event.target.value });
+    handleChangeInput(event) {
+        this.setState({ username: event.target });
+    }
+
+    handleChangeSelect(event) {
+        this.setState({ place: event.target });
     }
 
     handleSubmit(event) {
-        alert('An essay was submitted: ' + this.state.value);
+        alert('A name was submitted: ' + this.state.value);
         event.preventDefault();
     }
 
-
     render() {
 
-        return (
-            <div>
-                <div className="locationouter">
-                    <div className="location">
-                        <Select
-                            className="basic-single"
-                            classNamePrefix="select"
-                            defaultValue="Select One"
-                            name="Locations"
-                            options={Locations}
-                            onChange= {this.setState(place, onChange)}
+        return (<div>
+            <div className="typewriter">
+                <div className="heading">
+                    <Typewriter
+                        string='Select your Location'
+                        delay={80}
+                        stopBlinkinOnComplete
+
+                    />
+                </div>
+                <div className="subtext">
+                    <Delayed waitBeforeShow={3000}>
+                        <Typewriter
+                            string="Pick the location nearest to you"
+                            delay={80}
+                            stopBlinkinOnComplete
+
                         />
-                        <label><textarea value={this.state.value} onChange={this.handleChange} /></label>
-                    </div>
+                    </Delayed>
+                </div>
+                <div className="buttons2">
+                <div class="container">
+                    <a class="btn effect04" data-sm-link-text="JOIN" target="_blank"  ><span>NEXT</span></a>
                 </div>
             </div>
+            </div>
+
+            <div className="locationouter">
+                <div className="location">
+                    <Select
+                        className="basic-single"
+                        classNamePrefix="select"
+                        defaultValue="Select One"
+                        name="Locations"
+                        options={Locations}
+
+
+                    />
+                </div>
+            </div>
+
+            
+
+        </div>
         )
     }
 }
