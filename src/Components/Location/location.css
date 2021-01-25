@@ -1,0 +1,60 @@
+.basic-single{
+    width: 500px;
+    margin: 0 auto;
+}
+
+.typewriter {
+  position: fixed;
+  width: 100%;
+  top: 30%;
+  bottom: 70%;
+}
+
+.inputfield{
+    height: 30px;
+    width: 500px;
+    
+}
+
+.shellinput {
+    position: relative;
+    top: 60%;
+    bottom:40%;
+    width: 100%;
+
+}
+
+.heading {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    text-align: center;
+}
+
+.subtext {
+  padding-top: 100px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+}
+
+.locationouter{
+  position: fixed;
+    width: 100%;
+    padding-top: 60px;
+}
+
+
+
+@media screen and (max-width: 960px) { 
+
+    .subtext{
+      padding-top: 150px;
+    }
+
+    .basic-single{
+     width: 50%;
+    }
+}

@@ -8,17 +8,13 @@ import App from "../../App"
 class Home extends Component {
 
 
-  changestate(){
-    if(this.props.home == true){
-      this.props.changeHome(false)
-    } else {
-      this.props.changeHome(true)
-    }
+  changestage(newStage){
+    this.props.setStage(newStage)
   }
 
     render() {
         return (
-            <div className="typewriter">
+            <div className="heading">
       <Typewriter
         string='Welcome to Nearby on Instagram'
         delay={80}
@@ -38,7 +34,7 @@ class Home extends Component {
       <Delayed waitBeforeShow={0}>
         <div class="buttons">
           <div class="container">
-            <a class="btn effect04" data-sm-link-text="JOIN" target="_blank" onClick={() => this.changestate()} ><span>NEXT</span></a>
+            <a class="btn effect04" data-sm-link-text="JOIN" target="_blank" onClick={() => this.changestage(1)} ><span>NEXT</span></a>
           </div>
         </div>
       </Delayed>

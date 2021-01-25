@@ -4,7 +4,7 @@ import { Typewriter } from 'react-typewriting-effect'
 import 'react-typewriting-effect/dist/index.css'
 import Home from './Components/Home/home'
 import React, { Component } from 'react';
-import Details from './Components/Details/details'
+import Location from './Components/Location/location'
 
 
 
@@ -14,15 +14,27 @@ class App extends Component {
     super();
 
     this.state = {
-      home: true ? true : false
+      stage: 0,
+      username: '',
+      location: ''
     }
 
   }
-
-
-  changeHome(newValue) {
+  setUsername(newValue) {
     this.setState({
-      home: newValue,
+      username: newValue,
+    });
+  }
+
+  setLocation(newValue) {
+    this.setState({
+      username: newValue,
+    });
+  }
+
+  setStage(newValue) {
+    this.setState({
+      stage: newValue,
     });
   }
 
@@ -30,9 +42,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        {this.state.home && <Home home={this.state.home} changeHome={this.changeHome.bind(this)} />}
-        {!this.state.home && <Details/>}
-      </div>  
+        {this.state.stage === 0 &&  <Home stage={this.state.stage} setStage={this.setStage.bind(this)} />}
+        {this.state.stage === 1 && <Location location={this.state.location} setLocation={this.setLocation.bind(this)} />}
+      </div>
     );
   }
 }
