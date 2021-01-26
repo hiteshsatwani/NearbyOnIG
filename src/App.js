@@ -1,12 +1,10 @@
 import './App.css';
-import Delayed from './Components/delay'
-import { Typewriter } from 'react-typewriting-effect'
 import 'react-typewriting-effect/dist/index.css'
 import Home from './Components/Home/home'
 import React, { Component } from 'react';
 import Location from './Components/Location/location'
-
-
+import Username from './Components/Username/username'
+import Loading from './Components/Loading/loading'
 
 class App extends Component {
 
@@ -43,7 +41,9 @@ class App extends Component {
     return (
       <div>
         {this.state.stage === 0 &&  <Home stage={this.state.stage} setStage={this.setStage.bind(this)} />}
-        {this.state.stage === 1 && <Location location={this.state.location} setLocation={this.setLocation.bind(this)} />}
+        {this.state.stage === 1 && <Location location={this.state.location} setLocation={this.setLocation.bind(this)} stage={this.state.stage} setStage={this.setStage.bind(this)} />}
+        {this.state.stage === 2 && <Username username={this.state.username} setUsername={this.setUsername.bind(this)} stage={this.state.stage} setStage={this.setStage.bind(this)}/>}
+        {this.state.stage === 3 && <Loading />}
       </div>
     );
   }

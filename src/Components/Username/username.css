@@ -1,0 +1,35 @@
+.heading3{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    text-align: center;
+}
+.subtext3 {
+    padding-top: 30px;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 25px;
+      text-align: center;
+      width: 100%;
+      padding-bottom: 20px;
+  }
+.mainContainer{
+    position: fixed;
+    width: 100%;
+    top: 20%;
+    bottom: 80%;
+}
+
+.field{
+    display: block;
+    margin : 0 auto;
+    padding: 10px;
+}
+
+.inputField{
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    bottom: 50%;
+}
+

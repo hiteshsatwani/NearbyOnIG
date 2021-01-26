@@ -148,3 +148,10 @@ a.bttn-dark {
     }
   }
 }
+
+@media screen and (max-width: 960px) { 
+
+  .flex{
+    min-height: 50vh;
+  }
+}

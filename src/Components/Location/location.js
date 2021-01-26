@@ -5,7 +5,6 @@ import './location.scss'
 import { Typewriter } from 'react-typewriting-effect'
 import Select from 'react-select';
 import { Locations } from '../data'
-import { Input } from 'semantic-ui-react'
 
 
 class Details extends Component {
@@ -13,7 +12,6 @@ class Details extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: '',
             place: '',
             buttonp2: false ? true : false
         };
@@ -28,11 +26,15 @@ class Details extends Component {
         this.props.setLocation(place)
     }
 
+    changestage(newStage){
+        this.props.setStage(newStage)
+      }
+
     render() {
 
         return (<div>
             <div className="typewriter">
-                <div className="heading">
+                <div className="heading2">
                     <Typewriter
                         string='Select your Location'
                         delay={80}
@@ -40,7 +42,7 @@ class Details extends Component {
 
                     />
                 </div>
-                <div className="subtext">
+                <div className="subtext2">
                     <Delayed waitBeforeShow={2000}>
                         <Typewriter
                             string="Pick the location nearest to you"
@@ -52,7 +54,7 @@ class Details extends Component {
                 </div>
                 <div className="locationouter">
                     <div className="location">
-                        <Delayed waitBeforeShow={5000}>
+                        <Delayed waitBeforeShow={0}>
                             <Select
                                 className="basic-single"
                                 classNamePrefix="select"
@@ -68,7 +70,7 @@ class Details extends Component {
             
                 {this.state.buttonp2 &&
                     <div class="flex dark">
-                        <a href="#0" class="bttn-dark" onClick={() => this.setLocation(this.state.place)}>Continue</a>
+                        <a class="bttn-dark" onClick={() => this.setLocation(this.state.place) & this.changestage(2)}>Continue</a>
                     </div>
                 }
             </div>

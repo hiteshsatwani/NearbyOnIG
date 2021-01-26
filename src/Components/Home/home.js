@@ -8,40 +8,38 @@ import App from "../../App"
 class Home extends Component {
 
 
-  changestage(newStage){
+  changestage(newStage) {
     this.props.setStage(newStage)
   }
 
-    render() {
-        return (
-            <div className="heading">
-      <Typewriter
-        string='Welcome to Nearby on Instagram'
-        delay={80}
-        stopBlinkinOnComplete
+  render() {
+    return (
+      <div className="heading">
+        <Typewriter
+          string='Welcome to Nearby on Instagram'
+          delay={80}
+          stopBlinkinOnComplete
 
-      />
-      <Delayed waitBeforeShow={3000}>
-        <div className="subtext">
-          <Typewriter
-            string="A new platform designed to help meet new people near you"
-            delay={80}
-            stopBlinkinOnComplete
+        />
+        <Delayed waitBeforeShow={3000}>
+          <div className="subtext">
+            <Typewriter
+              string="A new platform designed to help meet new people near you"
+              delay={80}
+              stopBlinkinOnComplete
 
-          />
-        </div>
-      </Delayed>
-      <Delayed waitBeforeShow={0}>
-        <div class="buttons">
-          <div class="container">
-            <a class="btn effect04" data-sm-link-text="JOIN" target="_blank" onClick={() => this.changestage(1)} ><span>NEXT</span></a>
+            />
           </div>
-        </div>
-      </Delayed>
+        </Delayed>
+        <Delayed waitBeforeShow={0}>
+          <div class="flex dark">
+            <a href="#0" class="bttn-dark" onClick={() => this.changestage(1)}>Join Now</a>
+          </div>
+        </Delayed>
 
-    </div >
-        )
-    }
+      </div >
+    )
+  }
 }
 
 export default Home 

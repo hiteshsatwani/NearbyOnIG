@@ -12,7 +12,6 @@
   .subtext {
     font-size: 25px;
     padding-top: 25px;
-  
   }
   
   
@@ -152,3 +151,15 @@
     0% {opacity:0;}
     100% {opacity:1;}
     }
+
+@media screen and (max-width: 960px) {
+  .heading{
+    top: 20%;
+    bottom: 80%;
+  }
+  .subtext{
+    padding-top: 50px;
+  }
+
+  
+} 
